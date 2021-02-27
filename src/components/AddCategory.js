@@ -7,6 +7,7 @@ export const AddCategory = ({ setCategories } ) => {
 
     const handleInputChange = (e) => {
         setinputValue(e.target.value)
+
     }
 
     const handleSubmit = (e)=> {
@@ -15,6 +16,7 @@ export const AddCategory = ({ setCategories } ) => {
 
         if(inputValue.trim().length > 2) {
             setCategories(cats=> [inputValue, ...cats]);
+            //setCategories(2222334);
             setinputValue('')
         }
 
@@ -25,6 +27,7 @@ export const AddCategory = ({ setCategories } ) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{ inputValue }</p>
             <input
                 type="text"
                 value={ inputValue }
